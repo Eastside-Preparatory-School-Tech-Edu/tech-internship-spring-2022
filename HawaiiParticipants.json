@@ -1,0 +1,88 @@
+{
+	"participants" : [
+		{
+			"name": "Zach Hanken",
+			"email": "zhanken@eastsideprep.org"
+		},
+		{
+			"name": "Ethan Audia",
+			"email": "eaudia@eastsideprep.org"
+		},
+		{
+			"name": "Joseph Knight",
+			"email": "jknight@eastsideprep.org"
+		},
+		{
+			"name": "Feliks Kisielius",
+			"email": "fkisielius@eastsideprep.org"
+		},
+		{
+			"name": "Rami Rifaat",
+			"email": "rrifaat@eastsideprep.org"
+		},
+		{
+			"name": "Sanjana Satagopan",
+			"email": "sasatagopan@eastsideprep.org"
+		},
+		{
+			"name": "Everest Oreizy",
+			"email": "eoreizy@eastsideprep.org"
+		},
+		{
+			"name": "Egan Tardif",
+			"email": "etardif@eastsideprep.org"
+		},
+		{
+			"name": "Evelyn Drake",
+			"email": "edrake@eastsideprep.org"
+		},
+		{
+			"name": "Roya Mansour",
+			"email": "rmansour@eastsideprep.org"
+		},
+		{
+			"name": "Ana Hera",
+			"email": "ahera@eastsideprep.org"
+		},
+		{
+			"name": "Leah Guse",
+			"email": "lguse@eastsideprep.org"
+		},
+		{
+			"name": "Sara Dunnigan",
+			"email": "sdunnigan@eastsideprep.org"
+		},
+		{
+			"name": "Ben Spickett",
+			"email": "bspickett@eastsideprep.org"
+		},
+		{
+			"name": "Michael Zyskowski",
+			"email": "mzyskowski@eastsideprep.org"
+		},
+		{
+			"name": "Emma Grua",
+			"email": "egrua@eastsideprep.org"
+		},
+		{
+			"name": "Jack Denney", 
+			"email": "jdenney@eastsideprep.org"
+		},
+		{
+			"name": "Myan Ngo",
+			"email": "mngo@eastsideprep.org"
+		},
+		{
+			"name": "Rahul Bothra",
+			"email": "rbothra@eastsideprep.org"
+		},
+		{
+			"name": "Daniel Kirov-Tomilov",
+			"email": "dkirov-tomilov@eastsideprep.org"
+		},
+		{
+			"name": "Michael Sanders",
+			"email": "msanders@eastsideprep.org"
+		}
+	]
+}
