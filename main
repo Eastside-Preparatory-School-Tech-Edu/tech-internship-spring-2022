@@ -1,0 +1,80 @@
+//getting the form status 
+//basically i need something that either checks if something is returned w/ same file name
+//or something that checks the file and looks for specific things to be completed (or both)
+//and runs a program/method/class and returns a boolean for if its completed or not
+//that boolean will be the status
+//it will need acess to outlook and from there need to look for each persons email and
+//see if any of them have documents that are filled out
+//ex for logan: search all emails from lmckinley@eastsideprep.org (this could maybe be
+shortened so that u pass in parameters for the persons name and use like tostring)
+//cadence looking into outlook integration for the stuff
+//or maybe just pass in parameter with email and waiver type
+//if logan has sent a document with the correct name of the waiver, then you would
+//set this boolean to be true
+//using example w/ logan
+// runs method and boolean loganStatusWaiver = my code for determining the stuff
+//then you do the ebc.add for the waiver
+//do that for all 3 forms
+//do that for every single person in the thing
+//also if the boolean is false then we need to send like an email
+//that can be like reminder for the user that the person hasnt done a certain form or
+// automated response that i just like write out
+
+
+ebc.add("Logan McKinley", oahuWaiver, loganStatusWaiver)
+ebc.add("Logan McKinley", oahuMedical, status)
+ebc.add("Logan McKinley", oahuPerscription, status)
+ebc.add("Sonali	Vaid", oahuWaiver, status)
+ebc.add("Sonali	Vaid", oahuMedical, status)
+ebc.add("Sonali	Vaid", oahuPerscription, status)
+ebc.add("Ella Hallman Luhn", oahuWaiver, status)
+ebc.add("Ella Hallman Luhn", oahuMedical, status)
+ebc.add("Ella Hallman Luhn", oahuPerscription, status)
+ebc.add("Clare	Whitfield", oahuWaiver, status)
+ebc.add("Clare	Whitfield", oahuMedical, status)
+ebc.add("Clare	Whitfield", oahuPerscription, status)
+ebc.add("Abigail Kearny", oahuWaiver, status)
+ebc.add("Abigail Kearny", oahuMedical, status)
+ebc.add("Abigail Kearny", oahuPerscription, status)
+ebc.add("Artemis Sadahiro", oahuWaiver, status)
+ebc.add("Artemis Sadahiro", oahuMedical, status)
+ebc.add("Artemis Sadahiro", oahuPerscription, status)
+ebc.add("Ella Allgor", oahuWaiver, status)
+ebc.add("Ella Allgor", oahuMedical, status)
+ebc.add("Ella Allgor", oahuPerscription, status)
+ebc.add("Elsa Dittmeier", oahuWaiver, status)
+ebc.add("Elsa Dittmeier", oahuMedical, status)
+ebc.add("Elsa Dittmeier", oahuPerscription, status)
+ebc.add("Leonard Ifrim", oahuWaiver, status)
+ebc.add("Leonard Ifrim", oahuMedical, status)
+ebc.add("Leonard Ifrim", oahuPerscription, status)
+ebc.add("Rylie Crow", oahuWaiver, status)
+ebc.add("Rylie Crow", oahuMedical, status)
+ebc.add("Rylie Crow", oahuPerscription, status)
+ebc.add("Angelina Simone", oahuWaiver, status)
+ebc.add("Angelina Simone", oahuMedical, status)
+ebc.add("Angelina Simone", oahuPerscription, status)
+ebc.add("Kalie Uberti", oahuWaiver, status)
+ebc.add("Kalie Uberti", oahuMedical, status)
+ebc.add("Kalie Uberti", oahuPerscription, status)
+ebc.add("Amelia	Crill", oahuWaiver, status)
+ebc.add("Amelia	Crill", oahuMedical, status)
+ebc.add("Amelia	Crill", oahuPerscription, status)
+ebc.add("Ian Heuberger", oahuWaiver, status)
+ebc.add("Ian Heuberger", oahuMedical, status)
+ebc.add("Ian Heuberger", oahuPerscription, status)
+ebc.add("Jonathan Sun", oahuWaiver, status)
+ebc.add("Jonathan Sun", oahuMedical, status)
+ebc.add("Jonathan Sun", oahuPerscription, status)
+ebc.add("David Platt", oahuWaiver, status)
+ebc.add("David Platt", oahuMedical, status)
+ebc.add("David Platt", oahuPerscription, status)
+ebc.add("Harrison Prow", oahuWaiver, status)
+ebc.add("Harrison Prow", oahuMedical, status)
+ebc.add("Harrison Prow", oahuPerscription, status)
+ebc.add("Caren 	Ensing", oahuWaiver, status)
+ebc.add("Caren 	Ensing", oahuMedical, status)
+ebc.add("Caren 	Ensing", oahuPerscription, status)
+ebc.add("Hannah	Wand", oahuWaiver, status)
+ebc.add("Hannah	Wand", oahuMedical, status)
+ebc.add("Hannah	Wand", oahuPerscription, status)
