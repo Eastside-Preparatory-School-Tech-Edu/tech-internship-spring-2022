@@ -42,5 +42,13 @@ public class HashTable2D<key1, innerHashtable> extends Hashtable<Object, Object>
         }
         return false;
     }
+    
+    public Hashtable<String,Boolean> getParticipantForms(String key1name) {
+    	if(this.containsKey(key1name)) {
+    		return (Hashtable)this.get(key1name);
+    	}
+    	
+    	else return new Hashtable<String,Boolean>();
+    }
    
 }
