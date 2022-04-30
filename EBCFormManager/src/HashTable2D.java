@@ -43,4 +43,22 @@ public class HashTable2D<key1, innerHashtable> extends Hashtable<Object, Object>
         return false;
     }
    
+    // get method for 2D hashtable for a certain trip
+    // takes the trip name and the list of participants and returns a string
+    // containing which participants have not completed the necessary forms
+    public String getFormCompletion(String tripName, Participant[] pList){
+    	String toReturn = "";
+    	for(int i = 0; i < pList.length; i++)
+    	{
+    		String currentParticipantName = pList[i].name; 
+    		if(((Hashtable)this.get(tripName)).containsKey(currentParticipantName)) {
+    			if((boolean)((Hashtable)this.get(tripName)).get(currentParticipantName) == false)
+    			{
+    				//if person has not completed form, add to string
+    				toReturn = toReturn + ", " + currentParticipantName; 
+    			}
+    		}
+    	}
+    	return toReturn; 
+    }
 }
