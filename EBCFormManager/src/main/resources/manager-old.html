@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html style="height:100%; margin:0; padding:0; background-color:rgb(250, 250, 250);">
+
+    <head>
+        <title>Form Completion Manager</title>
+    </head>
+
+    <body style="margin:0; height:100%;">
+        <div style="margin:auto; width:50%; padding-top:50px; padding-bottom:20px;
+            text-align:center; font-size:175%; font-family:'Segoe UI';">
+            Form Completion Manager 
+        </div>
+        
+        <div style="margin:auto; height:40%; text-align:center;">
+            <table id="display" style="display:inline-block;margin:auto; width:40%; padding-top:30px; 
+                height:80%; background-color:rgb(230, 225, 225); text-align: left;
+                border-color:rgb(0, 0, 0, 0.05);">
+                
+                <tr>
+                    <th>Name</th>
+                    #foreach ( $h in $uniquekeys )
+                        <th>$h</th>
+                    #end
+                </tr>
+                #foreach ( $p in $people )
+                <tr>
+                    <td>$p.toString()</td>
+                    #foreach ( $k in $uniquekeys )
+                    <td>
+                        $data.get( $p.toString(), $k.toString() )
+                    </td>
+                    #end
+                </tr>
+                #end
+                
+            </table>
+        </div>
+
+        <div style="margin:auto; height:5%; padding-top:15px; text-align:center;
+            font-family:'Segoe UI';">
+            Separated by comma, enter full student name, form name, and status of completion (true/false)
+        </div>
+        
+        <div style="margin:auto; height:5%; padding-top:10px; text-align:center;">
+            <input type="text" id="input" style="background-color:rgb(230, 225, 225);
+                border-color:rgb(0, 0, 0, 0.05); width:40%;">
+            <button onclick="enter()">
+                enter
+            </button>
+        </div>
+    </body>
+
+</html>

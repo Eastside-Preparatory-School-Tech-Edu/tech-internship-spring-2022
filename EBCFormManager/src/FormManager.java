@@ -1,7 +1,12 @@
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class FormManager extends HashTable2D<Object, Object> {
 
+	public ArrayList<String> formNames = new ArrayList<String>();
+	
+	public ArrayList<String> participants = new ArrayList<String>();
+	
 	// default constructor
 	public FormManager() {
 		super();

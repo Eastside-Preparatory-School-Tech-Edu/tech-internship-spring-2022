@@ -19,12 +19,43 @@ function request(obj) {
     });
 }
 
-function request_summary() {
-    let obj1 = {
-        url : "/getCompleteSummary",
-        verb : "GET",
-        body : ""
-    }
+function mark_complete(name, key2) {
+    request({
+        verb: "GET",
+        url: "/addFormStatus/" + name + "/" + key2
+    })
     
-    request(obj1);
+    window.location.reload();
+}
+
+let options = document.getElementsByClassName("options-container")[0];
+
+function toggle_options() {
+    if( options.style.display == "block" ) {
+        options.style.display = "none"
+    } else {
+        options.style.display = "block"
+    }
+}
+
+let add_person_field = document.getElementById("add-person-field");
+
+function add_person(){
+    request({
+        verb: "GET",
+        url: "/addParticipant/" + add_person_field.value
+    })
+    
+    window.location.reload();
+}
+
+let add_form_field = document.getElementById("add-form-field");
+
+function add_form(){
+    request({
+        verb: "GET",
+        url: "/addRequiredForm/" + add_form_field.value
+    })
+    
+    window.location.reload();
 }
