@@ -9,13 +9,15 @@ import org.json.simple.parser.ParseException;
 
 public class Participant {
 	String name;
-	String email;
-	String birthdate;
+	int laserCutterLevel; 
+	int printerLevel; 
+	int powerToolsLevel;
 	
-	public Participant(String name, String email, String birthdate) {
+	public Participant(String name, int laserLevel, int printlevel, int toolsLevel) {
 		this.name = name;
-		this.email = email;
-		this.birthdate = birthdate;
+		this.laserCutterLevel = laserLevel; 
+		this.printerLevel = printLevel; 
+		this.powerToolsLevel = toolsLevel; 
 	}
 	
 	@SuppressWarnings("unchecked")

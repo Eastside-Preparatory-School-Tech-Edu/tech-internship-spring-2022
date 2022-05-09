@@ -17,8 +17,8 @@ import spark.template.velocity.VelocityTemplateEngine;
 public class Main {
 	
 	public static void main(String[] args) {
-		FormManager ebc = new FormManager();
-		ebc.formNames.addAll( Arrays.asList(
+		FormManager makerspace = new FormManager();
+		makerspace.formNames.addAll( Arrays.asList(
 				"Kohala Zipline",
 				"Medicine Information",
 				"Liability Waiver",
@@ -26,7 +26,7 @@ public class Main {
 				"Identification"
 		));
 		
-		ebc.participants.addAll( Arrays.asList(
+		makerspace.participants.addAll( Arrays.asList(
 				"Zach Hanken",
 				"Ethan Audia",
 				"Joseph Knight",
@@ -51,8 +51,8 @@ public class Main {
 				));
 		
 		//should do this in a better way if this was bigger scale.
-		Collections.sort(ebc.participants, String.CASE_INSENSITIVE_ORDER);
-		Collections.sort(ebc.formNames, String.CASE_INSENSITIVE_ORDER);		
+		Collections.sort(makerspace.participants, String.CASE_INSENSITIVE_ORDER);
+		Collections.sort(makerspace.formNames, String.CASE_INSENSITIVE_ORDER);		
 		
 		//Run the project, then go to localhost:80/hello in your browser.
 		
@@ -62,7 +62,7 @@ public class Main {
         get("/", (req, res) -> {
         	Map<String,Object> attr = new HashMap<>();
         	
-        	attr.put("data", ebc);
+        	attr.put("data", makerspace);
         	
 //        	Set<String> uniqueKeys = new HashSet<String>();
 //        	
@@ -76,8 +76,8 @@ public class Main {
 //        	System.out.println("Unique keys: " + uniqueKeys.toString());
         	
         	
-        	attr.put("uniquekeys", ebc.formNames);
-        	attr.put("people", ebc.participants);
+        	attr.put("uniquekeys", makerspace.formNames);
+        	attr.put("people", makerspace.participants);
         	
         	return new ModelAndView(attr, "manager.html");
         }, new VelocityTemplateEngine());
@@ -92,7 +92,7 @@ public class Main {
         	String name = req.params(":name");
         	String form = req.params(":form");
         	
-        	ebc.add(name, form, true);
+        	makerspace.add(name, form, true);
         	
         	System.out.print("set " + name + " - " + form + " as true");
         	
@@ -100,15 +100,15 @@ public class Main {
         });
 
         get("/addParticipant/:name", (req, res) -> {
-        	ebc.participants.add(req.params(":name"));
-        	Collections.sort(ebc.participants, String.CASE_INSENSITIVE_ORDER);
+        	makerspace.participants.add(req.params(":name"));
+        	Collections.sort(makerspace.participants, String.CASE_INSENSITIVE_ORDER);
         	
         	return "Done.";
         });
         
         get("/addRequiredForm/:title", (req, res) -> {
-        	ebc.formNames.add(req.params(":title"));
-        	Collections.sort(ebc.formNames, String.CASE_INSENSITIVE_ORDER);
+        	makerspace.formNames.add(req.params(":title"));
+        	Collections.sort(makerspace.formNames, String.CASE_INSENSITIVE_ORDER);
         	
         	return "Done.";
         });
