@@ -13,7 +13,7 @@ public class Participant {
 	int printerLevel; 
 	int powerToolsLevel;
 	
-	public Participant(String name, int laserLevel, int printlevel, int toolsLevel) {
+	public Participant(String name, int laserLevel, int printLevel, int toolsLevel) {
 		this.name = name;
 		this.laserCutterLevel = laserLevel; 
 		this.printerLevel = printLevel; 

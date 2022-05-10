@@ -19,35 +19,18 @@ public class Main {
 	public static void main(String[] args) {
 		FormManager makerspace = new FormManager();
 		makerspace.formNames.addAll( Arrays.asList(
-				"Kohala Zipline",
-				"Medicine Information",
-				"Liability Waiver",
-				"Allergy Notice",
-				"Identification"
+				"Laser Cutter",
+				"3D Printer",
+				"Power Tools"
 		));
 		
 		makerspace.participants.addAll( Arrays.asList(
-				"Zach Hanken",
-				"Ethan Audia",
-				"Joseph Knight",
-				"Feliks Kisielius",
-				"Rami Rifaat",
-				"Sanjana Satagopan",
+				"Cadence Ching",
+				"Jonathan Nister",
+				"Zarak Tareen",
+				"Tyler Zhang",
 				"Everest Oreizy",
-				"Egan Tardif",
-				"Evelyn Drake",
-				"Roya Mansour",
-				"Ana Hera",
-				"Leah Guse",
-				"Sara Dunnigan",
-				"Ben Spickett",
-				"Michael Zyskowski",
-				"Emma Grua",
-				"Jack Denney",
-				"Myan Ngo",
-				"Rahul Bothra",
-				"Daniel Kirov-Tomilov",
-				"Michael Sanders"
+				"Benjamin Brundage"
 				));
 		
 		//should do this in a better way if this was bigger scale.
@@ -85,14 +68,15 @@ public class Main {
         get("/getFormStatus/:name/:form", (req, res) -> {
         	String name = req.params(":name");
         	String form = req.params(":form");
-        	return ebc.get(name, form);
+        	return makerspace.get(name, form);
         });
         
-        get("/addFormStatus/:name/:form", (req, res) -> {
+        get("/addFormStatus/:name/:form/:lvl", (req, res) -> {
         	String name = req.params(":name");
         	String form = req.params(":form");
+        	String lvl = req.params(":lvl");
         	
-        	makerspace.add(name, form, true);
+        	makerspace.add(name, form, Integer.valueOf(lvl));
         	
         	System.out.print("set " + name + " - " + form + " as true");
         	

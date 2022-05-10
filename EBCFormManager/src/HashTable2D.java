@@ -44,8 +44,10 @@ public class HashTable2D<key1, innerHashtable> extends Hashtable<Object, Object>
                 return (int)((Hashtable)this.get(key1)).get(key2);
             }
         }
-        return -1; 
+        return 0; 
+        
     }
+    
     
     public Hashtable<String,Integer> getPersonProficiencies(String key1name) {
     	if(this.containsKey(key1name)) {

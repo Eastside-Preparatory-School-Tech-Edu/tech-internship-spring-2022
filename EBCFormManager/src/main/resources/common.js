@@ -20,9 +20,16 @@ function request(obj) {
 }
 
 function mark_complete(name, key2) {
+    level = window.prompt(name + " level for " + key2);
+    
+    if(level > 5 || level < 0 || isNaN(level)){
+        alert("Invalid input: must be a number between 1 and 5.");
+        return;
+    }
+    
     request({
         verb: "GET",
-        url: "/addFormStatus/" + name + "/" + key2
+        url: "/addFormStatus/" + name + "/" + key2 + "/" + level
     })
     
     window.location.reload();

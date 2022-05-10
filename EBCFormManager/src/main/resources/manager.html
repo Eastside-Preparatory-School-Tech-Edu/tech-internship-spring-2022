@@ -81,10 +81,21 @@
                     <td class="name">$p.toString()</td>
                     #foreach ( $k in $uniquekeys )
                     <td onclick="mark_complete('$p.toString()', '$k.toString()')">
-                        #if( $data.get( $p.toString(), $k.toString() ) )
-                            ✅
+                        
+                        #if ($data.get( $p.toString(), $k.toString() ) == 0 )
+                        ❌
+                        #elseif ($data.get( $p.toString(), $k.toString() ) == 1 )
+                        1️⃣
+                        #elseif ($data.get( $p.toString(), $k.toString() ) == 2 )
+                        2️⃣
+                        #elseif ($data.get( $p.toString(), $k.toString() ) == 3 )
+                        3️⃣
+                        #elseif ($data.get( $p.toString(), $k.toString() ) == 4 )
+                        4️⃣
+                        #elseif ($data.get( $p.toString(), $k.toString() ) == 5 )
+                        5️⃣
                         #else
-                            ❌
+                        $data.get( $p.toString(), $k.toString() )
                         #end
                     </td>
                     #end

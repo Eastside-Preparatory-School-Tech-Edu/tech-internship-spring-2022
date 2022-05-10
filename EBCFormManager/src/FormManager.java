@@ -21,8 +21,9 @@ public class FormManager extends HashTable2D<Object, Object> {
 	}
 	
 	// add full data
-	public void add(String name, String formName, boolean status) {
+	public void add(String name, String formName, int status) {
 		super.put(name, formName, status);
 	}
+	
 	
 }
